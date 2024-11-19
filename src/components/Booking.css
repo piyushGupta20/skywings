@@ -1,0 +1,211 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    color: #0073e6;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  
+  /* Container and Layout */
+  .booking-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step-content {
+    margin-top: 30px;
+  }
+  
+  .step-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+  
+  /* Step Indicator */
+  .step-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .step {
+    text-align: center;
+    position: relative;
+    flex: 1;
+  }
+  
+  .step-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 18px;
+    color: #666;
+    transition: all 0.3s ease;
+  }
+  
+  .step.active .step-circle,
+  .step.completed .step-circle {
+    background-color: #0073e6;
+    color: #fff;
+  }
+  
+  .step-label {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .step.active .step-label {
+    color: #0073e6;
+    font-weight: bold;
+  }
+  
+  .step-line {
+    height: 2px;
+    background-color: #ddd;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .step-line.completed {
+    background-color: #0073e6;
+  }
+  
+  /* Form Elements */
+  label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input, select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+  }
+  
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  textarea:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+  }
+  
+  /* Navigation Buttons */
+  .form-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  button.back-button {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  button.back-button:hover {
+    background-color: #aaa;
+  }
+  
+  /* Animations for Step Transitions */
+  .step-transition-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  .step-transition-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.3s ease;
+  }
+  
+  .step-transition-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .step-transition-exit-active {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .booking-container {
+      padding: 15px;
+    }
+  
+    .step-indicator {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .step-line {
+      display: none;
+    }
+  
+    .step-label {
+      font-size: 12px;
+    }
+  }
+  

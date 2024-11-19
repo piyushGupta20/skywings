@@ -1,0 +1,81 @@
+/* FlightSelection Styles */
+.step-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 20px;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  input[type="text"], input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 5px rgba(0, 115, 230, 0.5);
+  }
+  
+  .reverse-button {
+    font-size: 24px;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    align-self: center;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .reverse-button:hover {
+    background-color: #005bb5;
+    transform: rotate(180deg);
+  }
+  
+  .roundtrip-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"] {
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #005bb5;
+  }
+  

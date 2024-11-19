@@ -1,0 +1,48 @@
+.steps-container {
+    margin: 20px 0;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .step-item {
+    text-align: center;
+    position: relative;
+    flex: 1;
+    color: #999;
+  }
+  
+  .step-item.active .circle,
+  .step-item.completed .circle {
+    background-color: #0073e6;
+    color: #fff;
+  }
+  
+  .circle {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .step-label {
+    margin-top: 10px;
+  }
+  
+  .step-item.completed .step-label {
+    color: #0073e6;
+  }
+  
+  .step-item.active .step-label {
+    font-weight: bold;
+  }
+  
